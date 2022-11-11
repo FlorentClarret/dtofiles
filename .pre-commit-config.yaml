@@ -21,6 +21,7 @@ repos:
       v1.12.3
     hooks:
       - id: check-git-config-email
+        stages: ["commit"]
         args:
           - --domains
           - gmail.com
