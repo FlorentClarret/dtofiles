@@ -2,3 +2,4 @@ LICENSE
 README.md
 .pre-commit-config.yaml
 .gitmodules
+.DS_Store*
