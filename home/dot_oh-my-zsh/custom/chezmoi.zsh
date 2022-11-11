@@ -3,3 +3,4 @@
 alias cm='chezmoi'
 alias cma='chezmoi apply'
 alias cmad='chezmoi add'
+alias cmcd='chezmoi cd'
