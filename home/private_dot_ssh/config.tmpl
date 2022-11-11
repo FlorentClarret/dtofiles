@@ -3,7 +3,9 @@ Include config.d/external
 {{- end }}
 Host *                  # apply to all hosts
   AddKeysToAgent yes    # have the ssh command auto-add on first use
+{{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 }}
   UseKeychain yes       # make --apple-use-keychain and --apple-load-keychain the default
+{{- end }}
 {{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 .hostnames.perso.latitude }}
   IdentityFile ~/.ssh/id_rsa
 {{- else }}
