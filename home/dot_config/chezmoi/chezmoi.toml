@@ -6,6 +6,10 @@
     intel = "COMP-C02G70X8ML87"
     m1 = "COMP-MWCXH06XC7"
 
+[data.hostnames.perso]
+    latitude = "latitude"
+    helios = "helios64"
+
 [data.key.work]
     primary = "725D3843DBD883ED"
 

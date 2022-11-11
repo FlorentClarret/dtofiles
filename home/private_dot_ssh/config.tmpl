@@ -1,0 +1,40 @@
+{{- if eq .chezmoi.hostname .hostnames.perso.latitude .hostnames.perso.helios }}
+Include config.d/external
+{{- end }}
+Host *                  # apply to all hosts
+  AddKeysToAgent yes    # have the ssh command auto-add on first use
+  UseKeychain yes       # make --apple-use-keychain and --apple-load-keychain the default
+{{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 .hostnames.perso.latitude }}
+  IdentityFile ~/.ssh/id_rsa
+{{- else }}
+  IdentityFile ~/.ssh/id_ed25519
+{{- end }}
+
+{{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 }}
+# BEGIN ANSIBLE MANAGED BLOCK
+Host *
+# IPv4 only for speed
+AddressFamily inet
+Compression yes
+ControlMaster auto
+ControlPath /tmp/ssh_mux_%h_%p_%r
+ControlPersist 10m
+# send a keep-alive after 30s of inactivity
+ServerAliveInterval 30
+# END ANSIBLE MANAGED BLOCK
+{{- end }}
+
+Host latitude
+  User florentclarret
+  HostName latitude
+  Port 22
+
+Host helios
+  User florentclarret
+  HostName helios
+  Port 22
+
+Host router
+  User root
+  HostName router
+  Port 55522
