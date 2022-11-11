@@ -1,0 +1,20 @@
+# OS generated files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# Intellij idea files
+*.iml
+.idea
+.git_with_virtual_venv.sh
+
+# Python files
+venv*
+.python-version
+__pycache__
