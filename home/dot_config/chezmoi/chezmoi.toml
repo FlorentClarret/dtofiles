@@ -1,0 +1,10 @@
+[data.email]
+    perso = "florent.clarret@gmail.com"
+    work = "florent.clarret@datadoghq.com"
+
+[data.hostnames.work]
+    intel = "COMP-C02G70X8ML87"
+    m1 = "COMP-MWCXH06XC7"
+
+[data.key.work]
+    primary = "725D3843DBD883ED"

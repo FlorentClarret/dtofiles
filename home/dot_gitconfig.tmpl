@@ -1,0 +1,106 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[core]
+    autocrlf = input
+    editor = vim
+    tool = vimdiff
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.config/git/gitignore
+    pager = diff-so-fancy | less --tabs=4 -RFX
+    {{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 }}
+    hooksPath = /usr/local/dd/global_hooks
+    {{- end }}
+
+[user]
+	name = Florent Clarret
+
+[alias]
+    i = init
+    c = clone
+
+    st = status
+
+    ci = commit
+    cim = commit -m
+    ca = commit --amend
+
+    a = add
+    aa = add .
+
+    ch = checkout
+    br = branch
+    mr = merge
+    pl = pull
+    pr = pull --rebase
+    rb = rebase
+    ps = push
+    ft = fetch
+
+    unstage = reset HEAD --
+
+    last = log -1 HEAD
+    qlog = log --pretty=oneline --abbrev-commit --graph --decorate
+
+    di = diff
+    changes = diff --name-status
+    dic = diff --cached
+    diffstat = diff --stat
+
+    # list aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+    # list ignored files
+    li = ls-files --other --ignored --exclude-standard
+
+    rmc = rm --cached
+
+    sa = stash
+    sap = stash pop
+    sal = stash list
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+
+[color "diff-highlight"]
+	oldHighlight = red bold 52
+	oldNormal = red bold
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[branch]
+    autosetuprebase = always
+
+[push]
+    default = matching
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
+
+{{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 }}
+[include]
+    path = .config/git/gitconfig-work.toml
+
+[includeIf "gitdir:~/Documents/Personal/**"]
+    path = .config/git/gitconfig-perso.toml
+
+[includeIf "gitdir:~/.local/share/chezmoi/**"]
+    path = .config/git/gitconfig-perso.toml
+{{- else }}
+[include]
+    path = .config/git/gitconfig-perso.toml
+{{- end }}
