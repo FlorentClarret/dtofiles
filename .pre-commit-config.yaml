@@ -1,4 +1,8 @@
 ---
+
+ci:
+    skip: [check-git-config-email]
+
 repos:
   - repo: https://github.com/zricethezav/gitleaks
     rev: v8.15.0
@@ -21,7 +25,6 @@ repos:
       v1.12.3
     hooks:
       - id: check-git-config-email
-        stages: ["commit"]
         args:
           - --domains
           - gmail.com
