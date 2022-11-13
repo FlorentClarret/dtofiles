@@ -40,6 +40,36 @@ defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock orientation left
 
 ###############################################################################
+# Finder                                                                      #
+###############################################################################
+
+# Show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Use list view in all Finder windows by default
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`, `Nls`
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+
+# Show the ~/Library folder
+chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+
+# Show the /Volumes folder
+sudo chflags nohidden /Volumes
+
+###############################################################################
 # Hot corners                                                                 #
 ###############################################################################
 
