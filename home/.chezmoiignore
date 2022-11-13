@@ -3,3 +3,7 @@ README.md
 .pre-commit-config.yaml
 .gitmodules
 .DS_Store*
+
+{{ if ne .chezmoi.os "darwin" }}
+.chezmoiscripts/macos/**
+{{ end }}

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "> Running $(basename "$0") "
+
+set -eufo pipefail
+
+{{ $brews := list
+     "bat"
+     "gh"
+     "git"
+     "glances"
+     "jq"
+     "mc"
+     "pinentry-mac"
+     "screen"
+     "tmux"
+     "wget" -}}
+{{ $casks := list -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
