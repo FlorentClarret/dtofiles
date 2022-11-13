@@ -1,10 +1,29 @@
+{{/* boolean feature tags */}}
+{{- $personal := true -}}
+{{- "" -}}
+
+{{/* work around unreliable hostname on darwin */}}
+{{- $hostname := .chezmoi.hostname -}}
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   $computerName := output "scutil" "--get" "ComputerName" | trim -}}
+{{-   $hostname = $computerName -}}
+{{- end -}}
+
+{{- if eq $hostname "COMP_C02G70X8ML87" "COMP_MWCXH06XC7" -}}
+{{-   $personal = false -}}
+{{- end -}}
+
+[data]
+    hostname = {{ $hostname | quote }}
+    personal = {{ $personal }}
+
 [data.email]
     perso = "florent.clarret@gmail.com"
     work = "florent.clarret@datadoghq.com"
 
 [data.hostnames.work]
-    intel = "COMP-C02G70X8ML87"
-    m1 = "COMP-MWCXH06XC7"
+    intel = "COMP_C02G70X8ML87"
+    m1 = "COMP_MWCXH06XC7"
 
 [data.hostnames.perso]
     latitude = "latitude"
