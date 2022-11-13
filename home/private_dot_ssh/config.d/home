@@ -12,3 +12,8 @@ Host router
   User root
   HostName router
   Port 55522
+
+Host mac-mini
+  User florentclarret
+  HostName mac-mini
+  Port 22
