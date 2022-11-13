@@ -3,7 +3,7 @@ Include config.d/external
 
 Host *                  # apply to all hosts
   AddKeysToAgent yes    # have the ssh command auto-add on first use
-{{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 }}
+{{- if eq .chezmoi.os "darwin" }}
   UseKeychain yes       # make --apple-use-keychain and --apple-load-keychain the default
 {{- end }}
 {{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 .hostnames.perso.latitude }}
@@ -12,7 +12,7 @@ Host *                  # apply to all hosts
   IdentityFile ~/.ssh/id_ed25519
 {{- end }}
 
-{{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 }}
+{{- if not .personal }}
 # BEGIN ANSIBLE MANAGED BLOCK
 Host *
 # IPv4 only for speed
