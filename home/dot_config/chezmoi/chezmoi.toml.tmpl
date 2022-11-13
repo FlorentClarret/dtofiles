@@ -13,6 +13,10 @@
 {{-   $personal = false -}}
 {{- end -}}
 
+{{- if eq .chezmoi.os "darwin" -}}
+[pinentry]
+    command = "pinentry-mac"
+{{ end }}
 [data]
     hostname = {{ $hostname | quote }}
     personal = {{ $personal }}
