@@ -9,7 +9,7 @@
 [data.hostnames.perso]
     latitude = "latitude"
     helios = "helios64"
-    mac-mini = "helios64"
+    mac-mini = "mac-mini"
 
 [data.key.work]
     primary = "725D3843DBD883ED"
