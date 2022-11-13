@@ -8,7 +8,7 @@ Host *                  # apply to all hosts
 {{- if eq .chezmoi.os "darwin" }}
   UseKeychain yes       # make --apple-use-keychain and --apple-load-keychain the default
 {{- end }}
-{{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 .hostnames.perso.latitude }}
+{{- if eq .hostname .hostnames.work.intel .hostnames.work.m1 .hostnames.perso.latitude }}
   IdentityFile ~/.ssh/id_rsa
 {{- else }}
   IdentityFile ~/.ssh/id_ed25519

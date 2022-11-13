@@ -11,7 +11,7 @@
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
     excludesfile = ~/.config/git/gitignore
     pager = diff-so-fancy | less --tabs=4 -RFX
-    {{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 }}
+    {{- if eq .hostname .hostnames.work.intel .hostnames.work.m1 }}
     hooksPath = /usr/local/dd/global_hooks
     {{- end }}
 
