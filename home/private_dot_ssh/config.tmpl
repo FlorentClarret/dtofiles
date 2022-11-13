@@ -1,6 +1,5 @@
-{{- if eq .chezmoi.hostname .hostnames.perso.latitude .hostnames.perso.helios }}
 Include config.d/external
-{{- end }}
+
 Host *                  # apply to all hosts
   AddKeysToAgent yes    # have the ssh command auto-add on first use
 {{- if eq .chezmoi.hostname .hostnames.work.intel .hostnames.work.m1 }}
