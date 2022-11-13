@@ -1,3 +1,4 @@
+Include config.d/home
 Include config.d/external
 
 Host *                  # apply to all hosts
@@ -24,18 +25,3 @@ ControlPersist 10m
 ServerAliveInterval 30
 # END ANSIBLE MANAGED BLOCK
 {{- end }}
-
-Host latitude
-  User florentclarret
-  HostName latitude
-  Port 22
-
-Host helios
-  User florentclarret
-  HostName helios
-  Port 22
-
-Host router
-  User root
-  HostName router
-  Port 55522
