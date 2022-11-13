@@ -17,6 +17,11 @@ set -eufo pipefail
      "wget" -}}
 {{ $casks := list -}}
 
+{{ if not .personal -}}
+{{   $brews = concat $brews (list
+      "kind") -}}
+{{ end -}}
+
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($brews | sortAlpha | uniq) -}}
 brew "{{ . }}"
