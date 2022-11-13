@@ -1,8 +1,5 @@
 ---
 
-ci:
-    skip: [check-git-config-email]
-
 repos:
   - repo: https://github.com/zricethezav/gitleaks
     rev: v8.15.0
@@ -23,12 +20,3 @@ repos:
       - id: check-symlinks
       - id: detect-private-key
       # - id: forbid-submodules in the next version
-
-  - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev:
-      v1.12.3
-    hooks:
-      - id: check-git-config-email
-        args:
-          - --domains
-          - gmail.com
