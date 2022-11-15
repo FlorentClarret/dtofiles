@@ -63,9 +63,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`, `Nls`
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-# Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
-
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes
 
@@ -92,6 +89,13 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 # Top right screen corner → Desktop
 defaults write com.apple.dock wvous-tl-corner -int 4
 defaults write com.apple.dock wvous-tl-modifier -int 0
+
+###############################################################################
+# Browsers                                                                    #
+###############################################################################
+
+# This will open a popup
+defaultbrowser chrome
 
 ###############################################################################
 # Kill affected applications                                                  #
