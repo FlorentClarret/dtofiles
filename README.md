@@ -3,7 +3,7 @@
 |       |                                                                                                         |
 |-------|---------------------------------------------------------------------------------------------------------|
 | CI/CD | [![pre-commit.ci status][pre-commit-ci-badge]][pre-commit-ci-result]                                    |
-| Misc  | [![pre-commit][pre-commit-badge]][pre-commit-badge] [![Mergify Status][mergify-badge]][mergify-website] |
+| Tools | [![pre-commit][pre-commit-badge]][pre-commit-badge] [![Mergify Status][mergify-badge]][mergify-website] |
 
 
 My dotfiles, managed with [`chezmoi`][chezmoi-website].
