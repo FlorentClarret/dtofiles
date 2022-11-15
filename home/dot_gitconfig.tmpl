@@ -115,6 +115,9 @@
 [gpg]
     program = //usr/local/bin/gpg
 
+[init]
+	defaultBranch = main
+
 {{- if not .personal }}
 [include]
     path = .config/git/gitconfig-work.toml
