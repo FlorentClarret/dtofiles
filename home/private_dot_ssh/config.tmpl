@@ -5,15 +5,15 @@ Include config.d/external
 
 Host *                  # apply to all hosts
 # have the ssh command auto-add on first use
-  AddKeysToAgent yes
+    AddKeysToAgent yes
 {{- if eq .chezmoi.os "darwin" }}
 # make --apple-use-keychain and --apple-load-keychain the default
-  UseKeychain yes
+    UseKeychain yes
 {{- end }}
 {{- if eq .hostname .hostnames.work.m1 .hostnames.perso.latitude }}
-  IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/id_rsa
 {{- else }}
-  IdentityFile ~/.ssh/id_ed25519
+    IdentityFile ~/.ssh/id_ed25519
 {{- end }}
 
 {{- if not .personal }}

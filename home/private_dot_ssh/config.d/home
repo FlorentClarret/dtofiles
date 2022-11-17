@@ -1,29 +1,29 @@
 Host latitude
-  User florentclarret
-  HostName latitude
-  Port 22
+    User florentclarret
+    HostName latitude
+    Port 22
 
 Host helios
-  User florentclarret
-  HostName helios
-  Port 22
+    User florentclarret
+    HostName helios
+    Port 22
 
 Host router
-  User root
-  HostName router
-  Port 55522
+    User root
+    HostName router
+    Port 55522
 
 Host mac-mini
-  User florentclarret
-  HostName mac-mini
-  Port 22
+    User florentclarret
+    HostName mac-mini
+    Port 22
 
 Host pro-intel
-  User florent.clarret
-  HostName pro-intel
-  Port 22
+    User florent.clarret
+    HostName pro-intel
+    Port 22
 
 Host pro-m1
-  User florent.clarret
-  HostName pro-m1
-  Port 22
+    User florent.clarret
+    HostName pro-m1
+    Port 22
