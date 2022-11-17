@@ -25,7 +25,9 @@ set -eufo pipefail
 
 {{ if not .personal -}}
 {{   $brews = concat $brews (list
-      "kind") -}}
+      "hatch"
+      "kind"
+      "pip-tools") -}}
 {{ end -}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
