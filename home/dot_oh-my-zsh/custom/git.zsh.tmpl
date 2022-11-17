@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+alias gitconfig='vim $HOME/.gitconfig'
+
+export GITHUB_USER="FlorentClarret"
+{{- if not .personal }}
+export DD_GITHUB_USER="FlorentClarret"
+{{- end }}
