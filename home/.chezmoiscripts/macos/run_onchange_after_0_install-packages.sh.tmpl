@@ -21,7 +21,9 @@ set -eufo pipefail
      "tmux"
      "tree"
      "wget" -}}
-{{ $casks := list -}}
+
+{{ $casks := list
+     "1password/tap/1password-cli" -}}
 
 {{ if not .personal -}}
 {{   $brews = concat $brews (list
