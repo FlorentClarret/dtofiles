@@ -113,7 +113,11 @@
     insteadOf = https://github.com/
 
 [gpg]
-    program = //usr/local/bin/gpg
+{{- if eq .hostname .hostnames.work.m1 }}
+    program = /opt/homebrew/bin/gpg
+{{- else }}
+    program = /usr/local/bin/gpg
+{{- end }}
 
 [init]
 	defaultBranch = main
