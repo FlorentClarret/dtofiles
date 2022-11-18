@@ -24,7 +24,8 @@ set -eufo pipefail
      "wget" -}}
 
 {{ $casks := list
-     "1password/tap/1password-cli" -}}
+     "1password/tap/1password-cli"
+     "vlc" -}}
 
 {{ if not .personal -}}
 {{   $brews = concat $brews (list
