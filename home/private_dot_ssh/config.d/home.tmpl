@@ -1,0 +1,8 @@
+{{- $hosts := list "latitude" "helios" "router" "mac-mini" "pro-intel" "pro-m1" -}}
+{{- range ($hosts | sortAlpha | uniq) -}}
+Host {{ . }}
+    HostName {{ onepasswordRead  (print "op://network/" . "/url") }}
+    User {{ onepasswordRead (print "op://network/" . "/username") }}
+    Port {{ onepasswordRead (print "op://network/" . "/port") }}
+
+{{ end -}}
