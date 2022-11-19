@@ -1,3 +1,7 @@
 [user]
     email = {{ .email.perso }}
+{{ if eq .chezmoi.hostname .hostnames.perso.helios }}
+    signingkey = {{ .key.perso.helios }}
+{{ else if eq .chezmoi.hostname .hostnames.perso.m1 }}
     signingkey = {{ .key.perso.m1 }}
+{{ end }}
