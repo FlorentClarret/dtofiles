@@ -1,5 +1,9 @@
 [user]
     email = {{ .email.perso }}
+    signingkey = {{ .key.perso.primary }}
 
 [commit]
-    gpgsign = false
+    gpgsign = true
+
+[tag]
+    forceSignAnnotated = true
