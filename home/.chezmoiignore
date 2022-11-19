@@ -9,5 +9,5 @@ README.md
 {{ end }}
 
 {{ if ne .hostname .hostnames.perso.helios }}
-dot_oh-my-zsh/custom/helios.zsh
+.oh-my-zsh/custom/helios.zsh
 {{ end }}
