@@ -1,9 +1,9 @@
 {{- $hosts := list "vps" "bipbip" "coyote" "margoulin" -}}
 {{- range ($hosts | sortAlpha | uniq) -}}
 Host {{ . }}
-    HostName {{ onepasswordRead  (print "op://network/" . "/url") }}
-    User {{ onepasswordRead (print "op://network/" . "/username") }}
-    Port {{ onepasswordRead (print "op://network/" . "/port") }}
+    HostName {{ onepasswordRead  (print "op://network/" . "/url") $.onepassword.perso }}
+    User {{ onepasswordRead (print "op://network/" . "/username") $.onepassword.perso }}
+    Port {{ onepasswordRead (print "op://network/" . "/port") $.onepassword.perso }}
 
 {{ end -}}
 

@@ -9,6 +9,6 @@ export GITLAB_USER="florent.clarret"
 export DD_GITHUB_USER="FlorentClarret"
 
 export DD_GITLAB_USER="florent.clarret"
-export DD_GITLAB_TOKEN="{{ onepasswordRead "op://datadog/gitlab/token" }}"
-export DD_RELEASE_GITLAB_TOKEN="{{ onepasswordRead "op://datadog/gitlab/release-token" }}"
+export DD_GITLAB_TOKEN="{{ onepasswordRead "op://datadog/gitlab/token" .onepassword.perso }}"
+export DD_RELEASE_GITLAB_TOKEN="{{ onepasswordRead "op://datadog/gitlab/release-token" .onepassword.perso }}"
 {{- end }}
