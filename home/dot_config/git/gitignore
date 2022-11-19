@@ -12,7 +12,6 @@ Thumbs.db
 # Intellij idea files
 *.iml
 .idea
-.git_with_virtual_venv.sh
 
 # Python files
 venv*
