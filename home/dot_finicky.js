@@ -43,6 +43,10 @@ module.exports = {
       browser: "us.zoom.xos",
     },
     {
+      match: finicky.matchDomains("open.spotify.com"),
+      browser: "Spotify",
+    },
+    {
       match: finicky.matchHostnames([
         "youtube.com",
         "www.youtube.com",
