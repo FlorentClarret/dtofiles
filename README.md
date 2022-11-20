@@ -1,10 +1,9 @@
 # github.com/FlorentClarret/dotfiles
 
 |       |                                                                                                                                                      |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CI/CD | [![pre-commit.ci status][pre-commit-ci-badge]][pre-commit-ci-result]                                                                                 |
 | Tools | [![chezmoi][chezmoi-badge]][chezmoi-website] [![pre-commit][pre-commit-badge]][pre-commit-badge] [![Mergify Status][mergify-badge]][mergify-website] |
-
 
 My dotfiles, managed with [`chezmoi`][chezmoi-website].
 
