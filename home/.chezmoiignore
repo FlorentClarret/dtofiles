@@ -6,6 +6,7 @@ README.md
 
 {{ if ne .chezmoi.os "darwin" }}
 .chezmoiscripts/macos/**
+.finicky.js
 {{ end }}
 
 {{ if ne .chezmoi.hostname .hostnames.perso.helios }}
