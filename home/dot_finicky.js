@@ -1,7 +1,10 @@
 // ~/.finicky.js
 
 module.exports = {
-  defaultBrowser: "Google Chrome",
+  defaultBrowser: {
+        name: "Google Chrome",
+        profile: "Profile 1",
+  },
   rewrite: [
     {
       // Redirect all urls to use https
@@ -17,6 +20,18 @@ module.exports = {
             /zoom.us\/j\//,
         ],
         browser: "us.zoom.xos"
+    },
+    {
+      match: finicky.matchHostnames([
+        "youtube.com",
+        "www.youtube.com",
+        "youtu.be",
+        "discord.com",
+      ]),
+      browser: {
+        name: "Google Chrome",
+        profile: "Personal",
+      }
     }
   ]
 };
