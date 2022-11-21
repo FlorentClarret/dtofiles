@@ -23,11 +23,11 @@ module.exports = {
           .filter(
             ([key]) =>
               !removeKeysStartingWith.some((startingWith) =>
-                key.startsWith(startingWith)
-              )
+                key.startsWith(startingWith),
+              ),
           )
           .filter(
-            ([key]) => !removeKeys.some((removeKey) => key === removeKey)
+            ([key]) => !removeKeys.some((removeKey) => key === removeKey),
           );
 
         return {
