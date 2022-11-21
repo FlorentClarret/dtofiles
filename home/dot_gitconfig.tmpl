@@ -1,8 +1,8 @@
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
 
 [core]
     autocrlf = input
@@ -16,7 +16,7 @@
     {{- end }}
 
 [user]
-	name = Florent Clarret
+    name = Florent Clarret
 
 [alias]
     i = init
@@ -62,8 +62,8 @@
     sal = stash list
 
     dev = "checkout dev"
-	master = "checkout master"
-	main = "checkout main"
+    master = "checkout master"
+    main = "checkout main"
 
     tags = "tag -l"
     branches = "branch -a"
@@ -79,19 +79,19 @@
     ui = true
 
 [color "diff-highlight"]
-	oldHighlight = red bold 52
-	oldNormal = red bold
-	newNormal = green bold
-	newHighlight = green bold 22
+    oldHighlight = red bold 52
+    oldNormal = red bold
+    newNormal = green bold
+    newHighlight = green bold 22
 
 [color "diff"]
-	meta = 11
-	frag = magenta bold
-	func = 146 bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+    meta = 11
+    frag = magenta bold
+    func = 146 bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
 
 [branch]
     autosetuprebase = always
@@ -129,7 +129,7 @@
     forceSignAnnotated = true
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
 
 [fetch]
     prune = true
