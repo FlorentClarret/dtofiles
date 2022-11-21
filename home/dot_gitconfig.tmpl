@@ -131,6 +131,9 @@
 [init]
 	defaultBranch = main
 
+[fetch]
+    prune = true
+
 {{- if not .personal }}
 [include]
     path = .config/git/gitconfig-work.toml
