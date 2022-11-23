@@ -53,10 +53,7 @@ module.exports = {
         "youtu.be",
         "discord.com",
       ]),
-      browser: {
-        name: "Google Chrome",
-        profile: "Personal",
-      },
+      browser: "Firefox",
     },
   ],
 };
