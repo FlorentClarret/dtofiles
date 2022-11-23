@@ -44,6 +44,7 @@
 
     last = log -1 HEAD
     qlog = log --pretty=oneline --abbrev-commit --graph --decorate
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
     di = diff
     changes = diff --name-status
