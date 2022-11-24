@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 #compdef gtetion                                                                                                                                                                                                                                                      ─╯
 ###-begin-gt-completions-###
 #
