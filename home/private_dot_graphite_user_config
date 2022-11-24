@@ -1,3 +1,4 @@
 {
-  "branchPrefix": "florentclarret.graphite/"
+  "branchPrefix": "florentclarret.graphite/",
+  "tips": true
 }
