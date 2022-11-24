@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
 
-eval "$(gh completion -s bash)"
+eval "$(gh completion -s zsh)"
