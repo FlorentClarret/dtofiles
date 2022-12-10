@@ -1,6 +1,4 @@
-{{ .public_key.work.m1 }}
-{{ .public_key.work.intel }}
-{{ .public_key.perso.lightning }}
-{{ .public_key.perso.latitude }}
-{{ .public_key.perso.helios }}
-{{ .public_key.perso.macmini }}
+{{- $hosts := list "pro-m1" "pro-intel" "margoulin" "latitude" "mac-mini" "helios" "windows" -}}
+{{- range ($hosts | sortAlpha | uniq) -}}
+{{ onepasswordRead  (print "op://network/" . "/public key") $.onepassword.perso }}
+{{ end -}}
