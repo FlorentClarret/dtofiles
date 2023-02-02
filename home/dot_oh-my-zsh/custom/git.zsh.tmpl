@@ -7,6 +7,7 @@ export GITLAB_USER="florent.clarret"
 
 {{- if not .personal }}
 export DD_GITHUB_USER="FlorentClarret"
+export DD_GITHUB_TOKEN="{{ onepasswordRead "op://datadog/github/token" .onepassword.perso }}"
 
 export DD_GITLAB_USER="florent.clarret"
 export DD_GITLAB_TOKEN="{{ onepasswordRead "op://datadog/gitlab/token" .onepassword.perso }}"
