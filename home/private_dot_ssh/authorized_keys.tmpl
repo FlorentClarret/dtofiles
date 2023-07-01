@@ -1,4 +1,4 @@
-{{- $hosts := list "pro-m1" "pro-intel" "lightning" "latitude" "mac-mini" "helios" "windows" -}}
+{{- $hosts := list "pro-m1" "pro-intel" "lightning" "latitude" "mac-mini" "helios" "windows" "server" -}}
 {{- range ($hosts | sortAlpha | uniq) -}}
 {{ onepasswordRead  (print "op://network/" . "/public key") $.onepassword.perso }}
 {{ end -}}
