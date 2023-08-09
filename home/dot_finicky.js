@@ -39,10 +39,6 @@ module.exports = {
   ],
   handlers: [
     {
-      match: ["zoom.us/*", finicky.matchDomains(/.*\zoom.us/), /zoom.us\/j\//],
-      browser: "us.zoom.xos",
-    },
-    {
       match: finicky.matchDomains("open.spotify.com"),
       browser: "Spotify",
     },
