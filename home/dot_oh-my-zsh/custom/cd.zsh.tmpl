@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+
+alias ..='cd ../'
+alias .2='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+
+alias cdssh='cd ~/.ssh'
+
+{{ if not .personal -}}
+alias cddd='cd ~/dd'
+alias core='cd ~/dd/integrations-core'
+alias extras='cd ~/dd/integrations-extras'
+alias marketplace='cd ~/dd/marketplace'
+alias agent='cd ~/dd/datadog-agent'
+{{ end -}}
