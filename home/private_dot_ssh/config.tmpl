@@ -16,7 +16,7 @@ Host *                  # apply to all hosts
     IdentityFile ~/.ssh/id_ed25519
 {{- end }}
 
-{{- if not .personal }}
+{{- if .work }}
 # BEGIN ANSIBLE MANAGED BLOCK
 Host *
 # IPv4 only for speed

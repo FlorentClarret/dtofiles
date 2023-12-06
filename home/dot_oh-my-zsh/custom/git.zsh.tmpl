@@ -5,7 +5,7 @@ alias gitconfig='vim $HOME/.gitconfig'
 export GITHUB_USER="FlorentClarret"
 export GITLAB_USER="florent.clarret"
 
-{{- if not .personal }}
+{{- if .work }}
 export DD_GITHUB_USER="FlorentClarret"
 export DD_GITHUB_TOKEN="{{ onepasswordRead "op://datadog/github/token" .onepassword.perso }}"
 

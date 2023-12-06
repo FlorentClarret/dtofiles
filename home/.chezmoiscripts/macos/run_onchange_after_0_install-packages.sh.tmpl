@@ -40,7 +40,7 @@ set -eufo pipefail
      "raycast"
      "vlc" -}}
 
-{{ if not .personal -}}
+{{ if .work -}}
 {{   $brews = concat $brews (list
       "expect"
       "hatch"
