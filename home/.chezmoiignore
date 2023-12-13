@@ -15,4 +15,5 @@ README.md
 
 {{ if .personal }}
 .oh-my-zsh/custom/aws-vault.zsh
+.oh-my-zsh/custom/ddev.zsh
 {{ end }}
