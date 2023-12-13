@@ -16,4 +16,8 @@ README.md
 {{ if .personal }}
 .oh-my-zsh/custom/aws-vault.zsh
 .oh-my-zsh/custom/ddev.zsh
+.oh-my-zsh/custom/kubectl.zsh
+.oh-my-zsh/custom/tctl.zsh
+.oh-my-zsh/custom/terraform.zsh
+.oh-my-zsh/custom/texp.zsh
 {{ end }}
