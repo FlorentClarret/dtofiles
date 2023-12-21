@@ -1,0 +1,4 @@
+[Connection]
+apikey = {{ onepasswordRead  (print "op://datadog/datadog/dogshell/apikey") $.onepassword.perso }}
+appkey = {{ onepasswordRead  (print "op://datadog/datadog/dogshell/appkey") $.onepassword.perso }}
+api_host = {{ onepasswordRead  (print "op://datadog/datadog/dogshell/api_host") $.onepassword.perso }}
