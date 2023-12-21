@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "> Running $(basename "$0") "
+
+set -eufo pipefail
+
+{{ $packages := list
+     "datadog" -}}
+
+{{ range ($packages | sortAlpha | uniq) -}}
+pipx install "{{ . }}" --force
+{{ end -}}
