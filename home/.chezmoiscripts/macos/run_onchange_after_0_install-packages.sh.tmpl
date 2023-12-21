@@ -48,7 +48,8 @@ set -eufo pipefail
       "pip-tools"
       "ykman") -}}
 {{   $casks = concat $casks (list
-      "aws-vault") -}}
+      "aws-vault"
+      "notunes") -}}
 {{ end -}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
