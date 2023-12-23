@@ -4,5 +4,8 @@ Host {{ . }}
     HostName {{ onepasswordRead  (print "op://network/" . "/url") $.onepassword.perso }}
     User {{ onepasswordRead (print "op://network/" . "/username") $.onepassword.perso }}
     Port {{ onepasswordRead (print "op://network/" . "/port") $.onepassword.perso }}
+    ConnectTimeout 10
+    ServerAliveInterval 5
+    ServerAliveCountMax 1
 
 {{ end -}}
