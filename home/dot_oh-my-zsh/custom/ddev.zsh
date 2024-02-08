@@ -6,3 +6,6 @@ if [ ! -f ~/.oh-my-zsh/custom/ddev_autocomplete.zsh ]; then
     echo "Done."
     source ~/.oh-my-zsh/custom/ddev_autocomplete.zsh
 fi
+
+export DDEV_E2E_AGENT_PY2="datadog/agent-dev:nightly-main-py2"
+export DDEV_E2E_AGENT="datadog/agent-dev:nightly-main-py3"
