@@ -17,3 +17,6 @@ Thumbs.db
 venv*
 .python-version
 __pycache__
+
+# Custom script I use for PyCharm
+custom_git.sh
