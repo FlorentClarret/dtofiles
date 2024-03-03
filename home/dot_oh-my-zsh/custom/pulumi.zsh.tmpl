@@ -1,3 +1,10 @@
 #!/usr/bin/env zsh
 
 export PULUMI_CONFIG_PASSPHRASE="{{ onepasswordRead  (print "op://private/pulumi/passphrase") $.onepassword.perso }}"
+
+if [ ! -f ~/.oh-my-zsh/custom/pulumi_autocomplete.zsh ]; then
+    echo "Installing pulumi autocomplete..."
+    pulumi gen-completion zsh > ~/.oh-my-zsh/custom/pulumi_autocomplete.zsh
+    echo "Done."
+    source ~/.oh-my-zsh/custom/pulumi_autocomplete.zsh
+fi
