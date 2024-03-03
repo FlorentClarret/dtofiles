@@ -18,7 +18,8 @@ start_agent() {
     /usr/bin/ssh-add;
 }
 
-SSH_ENV="$HOME/.ssh/ssh_agent_data"
+SSH_ENV="$HOME/.ssh/data/ssh_agent_data"
+mkdir -p "$HOME/.ssh/data"
 
 # Source SSH settings, if needed
 if [[ -f "${SSH_ENV}" ]]; then
