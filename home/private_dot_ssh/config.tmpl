@@ -1,7 +1,9 @@
 HashKnownHosts yes
 
-Include config.d/home
-Include config.d/external
+Include config.d/00-default
+Include config.d/01-git
+Include config.d/02-home
+Include config.d/03-external
 
 Host *                  # apply to all hosts
 # have the ssh command auto-add on first use

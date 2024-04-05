@@ -6,9 +6,3 @@ Host {{ . }}
     Port {{ onepasswordRead (print "op://network/" . "/port") $.onepassword.perso }}
 
 {{ end -}}
-
-Host github.com
-    User git
-
-Host gitlab.com
-    User git
