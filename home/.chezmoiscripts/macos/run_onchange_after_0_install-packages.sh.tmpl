@@ -43,6 +43,7 @@ set -eufo pipefail
 
 {{ if .work -}}
 {{   $brews = concat $brews (list
+      "clang-format"
       "expect"
       "hatch"
       "kind"
