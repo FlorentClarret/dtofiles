@@ -20,3 +20,6 @@ __pycache__
 
 # Custom script I use for PyCharm
 .custom_git.sh
+
+# Go files
+go.work*
