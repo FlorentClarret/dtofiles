@@ -18,6 +18,7 @@ README.md
 
 .oh-my-zsh/custom/aws-vault.zsh
 .oh-my-zsh/custom/ddev.zsh
+.oh-my-zsh/custom/deva.zsh
 .oh-my-zsh/custom/kubectl.zsh
 .oh-my-zsh/custom/pulumi.zsh
 .oh-my-zsh/custom/tctl.zsh
