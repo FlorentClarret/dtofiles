@@ -2,3 +2,6 @@ github.com:
     user: FlorentClarret
     oauth_token: {{ onepasswordRead  (print "op://private/github/gh-cli-token") $.onepassword.perso }}
     git_protocol: ssh
+    users:
+      FlorentClarret:
+        oauth_token: {{ onepasswordRead  (print "op://private/github/gh-cli-token") $.onepassword.perso }}
