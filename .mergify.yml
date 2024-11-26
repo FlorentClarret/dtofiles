@@ -1,10 +1,14 @@
----
-pull_request_rules:
-  - name: automatic merge for pre-commit pull requests
-    conditions:
+queue_rules:
+  - name: default
+    queue_conditions:
       - author=pre-commit-ci[bot]
       - check-success=pre-commit.ci - pr
       - check-success=mergefreeze
+    merge_conditions: []
+    merge_method: squash
+
+pull_request_rules:
+  - name: automatic merge for pre-commit pull requests
+    conditions: []
     actions:
       queue:
-        method: squash
